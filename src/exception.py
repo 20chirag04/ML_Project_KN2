@@ -1,5 +1,5 @@
 import sys
-from src import logger
+from src.logger import logging
 class NetworkSecurityException(Exception):
     def __init__(self,error_message,error_details:sys):
         self.error_message = error_message
@@ -10,8 +10,8 @@ class NetworkSecurityException(Exception):
 
     def __str__(self):
         return (
-            "Error Occured in python script name [{0}]"
-            "line number [{1}]"
+            "Error Occurred in python script name [{0}] "
+            "line number [{1}] "
             "error message[{2}]").format(
                 self.file_name,self.lineno,self.error_message)
 
